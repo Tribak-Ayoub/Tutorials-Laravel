@@ -22,6 +22,6 @@ class CategoriesTableSeeder extends Seeder
         //     ]);
         // }
         \App\Models\Category::factory()->count(10)->create();
-        \App\Models\Category::factory()->count(5)->create();
+        \App\Models\Category::factory()->count(5)->active()->create();
     }
 }
