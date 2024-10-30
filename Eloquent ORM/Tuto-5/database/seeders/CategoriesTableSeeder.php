@@ -3,12 +3,23 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Category;
+use League\Csv\Reader;
 
-class CategorySeeder extends Seeder
+class CategoriesSeeder extends Seeder
 {
     public function run(): void
     {
-        \App\Models\Category::factory()->count(10)->create();           // 10 random categories
-        \App\Models\Category::factory()->count(5)->active()->create();  // 5 active categories
+        // Load the CSV file
+        $csv = Reader::createFromPath(database_path('seeds/categories.csv'));
+        $csv->setHeaderOffset(0); // Set the first row as the header
+
+        // Iterate over the CSV records
+        foreach ($csv as $record) {
+            Category::create([
+                'name' => $record['name'],
+                'description' => $record['description'],
+            ]);
+        }
     }
 }
