@@ -3,13 +3,12 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Category;
 
-class CategoriesTableSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
-        Category::create(['name' => 'Technology']);
-        Category::create(['name' => 'Science']);
+        \App\Models\Category::factory()->count(10)->create();           // 10 random categories
+        \App\Models\Category::factory()->count(5)->active()->create();  // 5 active categories
     }
 }
