@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
 <h1>Créer Un Article</h1>
 <form action="/articles" method="POST">

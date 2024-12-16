@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', 'Liste des Articles'); ?>
 
 <?php $__env->startSection('content'); ?>
