@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->text('content');
-            $table->unsignedBigInteger('commentable_id'); // Stores the ID of the associated entity (e.g., Article or Video).
-            $table->string('commentable_type'); // Stores the type (model name) of the associated entity (e.g., 'App\Models\Article').         
+            $table->string('title');
+            $table->text('url');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('videos');
     }
 };

@@ -22,7 +22,13 @@ class Article extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function tags() {
-        return $this->belongsToMany(Tag::class,'article_tag')->withPivot('description');;
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'article_tag')->withPivot('description');;
+    }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable'); // Defines the inverse polymorphic relationship.
     }
 }

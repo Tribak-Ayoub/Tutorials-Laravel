@@ -11,4 +11,8 @@ class Tag extends Model
     public function articles() {
         return $this->belongsToMany(Article::class,'article_tag')->withPivot('description');;
     }
+
+    public function comments() {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }
