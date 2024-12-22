@@ -9,7 +9,15 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Models\\Article' => $baseDir . '/app/Models/Article.php',
     'App\\Models\\Category' => $baseDir . '/app/Models/Category.php',
+<<<<<<< HEAD
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+=======
+    'App\\Models\\Comment' => $baseDir . '/app/Models/Comment.php',
+    'App\\Models\\Profile' => $baseDir . '/app/Models/Profile.php',
+    'App\\Models\\Tag' => $baseDir . '/app/Models/Tag.php',
+    'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\Video' => $baseDir . '/app/Models/Video.php',
+>>>>>>> 3f954e5052ff0c7aa4f144f228efae31b59a18fc
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',
