@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -51,11 +52,13 @@ class User extends Authenticatable
         return $this->hasMany(Article::class);
     }
 
-    public function profile() {
+    public function profile()
+    {
         return $this->hasOne(Profile::class);
     }
 
-    public function hasRole($role) {
+    public function hasRole($role)
+    {
         return $this->role === $role;
     }
 }
