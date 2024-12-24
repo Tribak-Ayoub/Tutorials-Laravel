@@ -10,6 +10,9 @@
           <div class="col-sm-6">
             <h1 class="m-0">Articles</h1>
           </div>
+          <div class="col-sm-6 text-end">
+          <a href="{{ route('articles.create') }}" class="btn btn-primary">Ajoute un article</a>
+          </div>
         </div>
       </div>
     </div>
@@ -39,7 +42,11 @@
                   <td>
                     <a href="#" class="btn btn-info btn-sm">Voir</a>
                     <a href="#" class="btn btn-warning btn-sm">Modifier</a>
-                    <a href="#" class="btn btn-danger btn-sm">Supprimer</a>
+                    <form action="{{route('articles.destroy', $article->id)}}" method="Post">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                    </form>
                   </td>
                 </tr>
                 @endforeach
