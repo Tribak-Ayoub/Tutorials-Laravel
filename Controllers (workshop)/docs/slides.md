@@ -31,8 +31,8 @@
   <tr>
     <td>Monday</td>
     <td>Planning</td>
-    <td></td>
-    <td></td>
+    <td>Self-learning(controllers)</td>
+    <td>Self-learning(controllers)</td>
   </tr>
   <tr>
     <td>Tuesday</td>
@@ -116,9 +116,7 @@
 
 ### **7. Prototype:**
 
-- view product
-- add product
-- delete product
+- blog (Previous prototype)
 - ajax (one-page)
 - repository
 
