@@ -48,7 +48,7 @@
   </tr>
   <tr>
     <td>Thursday</td>
-    <td></td>
+    <td>project fil rouge</td>
     <td></td>
     <td></td>
   </tr>
