@@ -51,7 +51,7 @@ Before starting, make sure you have:
    ```
 
 2. **Set Up a Laravel Project**:
-   Navigate to the `Controllers (workshop)/LaravelProject/` folder and install dependencies:
+   Navigate to the `Controllers-workshop/LaravelProject/` folder and install dependencies:
    ```bash
    cd LaravelProject
    composer install
