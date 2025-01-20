@@ -1,0 +1,13 @@
+title: Tutorials Laravel
+description: Laravel Controllers Workshop
+baseurl: ""  # Base URL for your site, leave empty for the root URL
+url: "https://your-github-username.github.io"  # Your GitHub Pages URL
+theme: jekyll-theme-primer  # The theme you are using
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-relative-links
+source: Toturials-Laravel/Controllers-workshop/docs  # This is where your content is located
+destination: docs/_site  # The folder where the site will be built
+markdown: kramdown
+paginate: 5  # Number of posts per page (optional, only if you have multiple posts)
