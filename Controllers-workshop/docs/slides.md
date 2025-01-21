@@ -6,7 +6,7 @@ This document contains the link to the Google Slides presentation for the Larave
 
 ## Access the Presentation
 
-[**Laravel Controllers Workshop - Google Slides**](#https://docs.google.com/presentation/d/1VMlnL1jjmG12ZhFinnD-qtFQa9wvv0H1f2J1IoGGkyM/edit?usp=sharing)
+[**Laravel Controllers Workshop - Google Slides**](https://docs.google.com/presentation/d/1VMlnL1jjmG12ZhFinnD-qtFQa9wvv0H1f2J1IoGGkyM/edit?usp=sharing)
 
 ---
 
