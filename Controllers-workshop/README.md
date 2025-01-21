@@ -93,7 +93,14 @@ Before starting, make sure you have:
 ### **5. Advanced Topics**
 - Dependency injection.
 - Single-action controllers.
-- API resource controllers.
+- API resource Routes.
+- Customizing Missing Model Behavior.
+- Soft Deleting Models.
+- Specifying the Resource Model.
+- Generating Form Requests.
+- Partial Resource Routes.
+- Naming Resource Routes.
+- Controller Namespacing.
 
 ---
 
@@ -111,8 +118,8 @@ Each exercise is detailed in the `exercises/` directory.
 ## Resources
 
 - **Laravel Documentation**: [Controllers](https://laravel.com/docs/controllers)
-- **Workshop Slides**: Available in the `docs/` directory.
-- **Examples**: Check the `examples/` folder for reference implementations.
+- **Workshop Docs**: Available in the `docs/` directory.
+- **Exercices**: Check the `exercices/` folder for reference implementations.
 
 ---
 
