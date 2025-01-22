@@ -47,23 +47,46 @@
         })
     })
 
-    $(document).on('submite','#addProduct', function(e){
-        e.preventDefault();
+    $(document).on('submit','#addProduct', function(e) {
+    e.preventDefault();
 
+    let formData = new FormData($('#addProduct')[0]);
 
-        let formData = new FormData($('#addProduct')[0]);
+    $.ajax({
+        type: 'POST',
+        url: "{{ route('products.store') }}",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (res) {
+            // Assuming the response includes the newly created product's data
+            // For example: res contains the product id and name in JSON format
 
-        $.ajax({
-            type: 'POST',
-            url: "{{route('products.store')}}",
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function (res) {
+            if(res.success) {
+                // Append the new product to the table dynamically
+                $('table tbody').append(`
+                    <tr>
+                        <td>${res.product.id}</td>
+                        <td>${res.product.name}</td>
+                    </tr>
+                `);
 
+                // Optionally close the modal after a successful submission
+                bootbox.hideAll();
 
+                // Optionally reset the form if needed
+                $('#addProduct')[0].reset();
+            } else {
+                // Handle validation errors or failure (based on your response)
+                alert('Error: ' + res.message);
             }
-        })
-    })
+        },
+        error: function(xhr, status, error) {
+            // Handle any AJAX errors
+            alert('Request failed: ' + error);
+        }
+     });
+});
+
 </script>
 @endsection
